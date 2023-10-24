@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="color" placeholder="Enter The Color You Want">
+    <br><br>
+    <input type="button" value="Click Here!" onclick="hi1()">
+    <input type="button" value="click me for colors" onclick="abc()">
+    <script>
+            // setInterval(() => {
+            //     document.write("HI <br>")
+            // }, 1000);
+            // setTimeout(() => {
+            //     document.write("Hello <br>")
+
+            // }, 2000);
+
+
+            function hi()
+            {
+                let a=document.getElementById("color").value;
+                document.querySelector("body").style.backgroundColor=a;
+            }
+            function hi1()
+            {
+                setTimeout(() => {
+                    hi();
+                }, 3000);
+            }
+
+            let yuva=["red","blue","green","yellow","aqua","black"]
+            function abc()
+            {
+                for(let i=0;i<yuva.length;i++)
+                {
+                    setInterval(() => {
+                        document.querySelector("body").style.backgroundColor=yuva[i]
+
+                }, 4000);
+                }
+            }
+            
+    </script>
+</body>
+</html>

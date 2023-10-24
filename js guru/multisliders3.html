@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+          $("button").click(function(){
+            $("img").animate({
+              width: 'toggle'
+            });
+          });
+        }); -->
+        <!-- </script>  -->
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        img{
+            /* transition: transform 0.5s; */
+            border-radius: 100px;
+            position: relative;
+            top: 320px;
+            /* transition: 2s; */
+        }
+        /* #img:hover{
+            transform: scale(1.1);
+            cursor: pointer; */
+         /* } */
+        #img1{
+            transition: transform 0.5s;
+            width: 400px;
+            height:300px;
+            position: relative;
+            left: -30px;
+        }
+        #img1:hover{
+            transform: scale(1.21);
+            cursor: pointer;
+        }
+        #img2{
+            transition: transform 0.5s;
+            width: 400px;
+            height:300px;
+        }
+        #img2:hover{
+            transform: scale(1.21);
+            cursor: pointer;
+        }
+        #img3{
+            transition: transform 0.5s;
+            width: 400px;
+            height:300px;
+            position: relative;
+            left: 30px;
+        }
+        #img3:hover{
+            transform: scale(1.21);
+            cursor: pointer;
+        }
+
+        button{
+            transition: transform 0.5s;
+            height:100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: azure;
+            color: rgb(0, 0, 0);
+            position: relative;
+            top: 400px;
+        }
+        button:hover{
+            background-color: green;
+            color: rgb(247, 178, 5);
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        #but1{
+            font-size: 50px;
+            position: relative;
+            left: 30px;   
+        }
+        #but2{
+            font-size: 50px;
+            position: relative;
+            left: -1430px;
+        }
+        #g {
+            transition: transform 2s;
+            background-color: rgb(45, 10, 247);
+            color: rgb(183, 112, 24);
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            border-radius: 20px;
+            position: relative;
+            top:350px;
+            animation:rotate 2s infinite;
+        }
+        /* #g:hover { transform: rotate(720deg);} */
+                    @keyframes rotate {
+            from {transform: rotate(720deg)}
+            to {transform: rotate(-720deg)}
+            }
+            #h {
+            transition: transform 2s;
+            background-color: rgb(10, 215, 247);
+            color: rgb(143, 24, 183);
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            border-radius: 20px;
+            position: relative;
+            top:350px;
+            left: -1750px;
+            animation:rotate 2s infinite;
+        }
+        /* #g:hover { transform: rotate(720deg);} */
+                    @keyframes rotate {
+            from {transform: rotate(720deg)}
+            to {transform: rotate(-720deg)}
+                    }
+        /* #scene1{
+            width:10em;
+  height:10em;
+  margin:2em;
+  border:3px solid #ccc;
+  /* This is important! for z-axis effects} */
+        #square1{
+            width: 200px;
+            height: 50px;
+            background-color: aqua;
+            font-size: large;
+            position: relative;
+            left: -1000px;
+            animation:clock 2s infinite;
+        }
+        @keyframes clock {
+            from{
+                filter: hue-rotate(100deg);
+            }
+            to{
+                filter: hue-rotate(3000deg);
+            }
+        }
+         body{
+            background-color: yellow;
+            background-image: url(./../oceanship.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+
+        } 
+        /* @keyframes clock {
+            from{
+                filter: hue-rotate(0deg);
+            }
+            to{
+                filter: hue-rotate(2000deg);
+            }
+        } */
+        .scene {
+  width:10em;
+  height:10em;
+  margin:2em;
+  border:3px solid #b808fd;
+  /* This is important! for z-axis effects */
+  perspective: 5em;
+}
+
+.square {
+  width:100%;
+  height:100%;
+  background-color:#1403ff;
+  line-height:10em;
+  text-align:center;
+  color:#09eef6;
+}
+.square.z-axis {
+  animation: z-axis-animation 1s ease-in-out 0s infinite alternate;
+}
+@keyframes z-axis-animation {
+  from {transform: translateZ(2em)}
+  to {transform: translateZ(-2em)}
+}
+.scene1 {
+  width:10em;
+  height:10em;
+  margin:2em;
+  border:3px solid #e60edb;
+  position: relative;
+  left: 1500px;
+  /* This is important! for z-axis effects */
+  perspective: 5em;
+}
+.square1 {
+  width:100%;
+  height:100%;
+  background-color:#ff4603;
+  line-height:10em;
+  text-align:center;
+  color:#09f6ea;
+}
+.square1.z-axis {
+  animation: z-axis-animation 1s ease-in-out 0s infinite alternate;
+}
+@keyframes z-axis-animation {
+  from {transform: translateZ(2em)}
+  to {transform: translateZ(-2em)}
+}
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="square z-axis">welcome</div>
+      </div>
+      <div class="scene1">
+        <div class="square1 z-axis">clickbutton</div>
+      </div>
+      <!-- <video src="js guru/1.mp4.mp4" loop controls autoplay muted></video> -->
+    <script>
+        // let div2=document.createElement("div")
+        // div2.setAttribute("id","scene1")
+        let div1=document.createElement("div")
+        div1.setAttribute("id","square1")
+        div1.innerHTML="hello";
+        let h1=document.createElement("h1");
+        h1.setAttribute("id","g");
+        h1.innerHTML="guru"
+        let h2=document.createElement("h2");
+        h2.setAttribute("id","h");
+        h2.innerHTML="guru"
+        let img1=document.createElement("img");
+        img1.src='im2.jpg'
+        let img2=document.createElement("img");
+        let img3=document.createElement("img");
+        img2.src="im1.jpg"
+        img3.src="im3.jpg"
+        img1.setAttribute("id","img1");
+        img2.setAttribute("id","img2");
+        img3.setAttribute("id","img3");
+        let but1=document.createElement("button");
+        but1.innerHTML=">"
+        but1.setAttribute("id","but1")
+        let but2=document.createElement("button");
+        but2.innerHTML="<"
+        but2.setAttribute("id","but2")
+        let arr=['im11.jpg','im22.jpg','im33.jpg'];
+        let arr1=['images 5.jpg','images 6.jpg','im3.jpg'];
+        let arr2=['im 7.jpg','images 44.jpg','images 4.jpg'];
+        let i=0;
+        but1.addEventListener("click",function()
+        {
+           
+            img1.src=arr[i]
+            img2.src=arr1[i]
+            img3.src=arr2[i]
+
+            i++;
+            if(i==arr.length && i==arr1.length && i==arr2.length)
+            {
+                i=0;
+            }
+            // setTimeout("function()",2500);
+        })
+        y=arr.length
+        y1=arr1.length
+        y2=arr2.length
+
+        but2.addEventListener("click",function()
+        {
+            y--;
+            img1.src=arr[y]
+            y1--;
+            img2.src=arr1[y1]
+            y2--;
+            img3.src=arr2[y2]
+            if(y==0 && y1==0 && y2==0)
+            {
+                y=arr.length
+                y1=arr1.length
+                y2=arr2.length
+            }
+            // setTimeout("function()",2500);
+        })
+        let b=document.body
+        b.append(img1)
+        b.append(img2)
+        b.append(img3)
+        b.append(but1)
+        b.append(but2)
+        b.append(h1,h2)
+        b.append(div1)
+        
+       
+
+    </script>
+</body>
+</html>

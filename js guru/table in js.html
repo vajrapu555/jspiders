@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b=document.body
+        let table=document.createElement('table')
+        table.setAttribute("rules","all")
+        table.setAttribute("border","5px","solid","blue ")
+        let tr=document.createElement('tr')
+        let td=document.createElement('td')
+        console.log(table)
+        let arr=['student name ','quafication','percentage']
+        let arr1=['dinga','btech','50.4']
+        let arr2=['dingi','p.hd','99.9']
+        let arr3=['manga','m.tech','89.9']
+
+       
+        for (i=0;i<4;i++)
+        {
+            let tr=document.createElement('tr')
+            if(i==0)    
+            {
+            for (j=0;j<arr.length;j++)
+            {
+                let td=document.createElement('td')
+                td.innerHTML=arr[j]
+                console.log(td)
+                tr.append(td)
+            }}
+            if(i==1)    
+            {
+            for (j=0;j<arr.length;j++)
+            {
+                let td=document.createElement('td')
+                td.innerHTML=arr1[j]
+                console.log(td)
+                tr.append(td)
+            }}
+            if(i==2)    
+            {
+            for (j=0;j<arr.length;j++)
+            {
+                let td=document.createElement('td')
+                td.innerHTML=arr2[j]
+                console.log(td)
+                tr.append(td)
+            }}
+            if(i==3)    
+            {
+            for (j=0;j<arr.length;j++)
+            {
+                let td=document.createElement('td')
+                td.innerHTML=arr3[j]
+                console.log(td)
+                tr.append(td)
+            }}        
+            console.log(tr)
+            table.append(tr)
+        }
+        b.append(table)
+
+        
+        
+    </script>
+</body>
+</html>

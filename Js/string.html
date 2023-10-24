@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x="Yuva"
+        let y="Vijayawada"
+        console.log("Hi my name is "+x+"\nI am belongs to "+y);
+        console.log(`I asa ${x} and 
+        i ${y}`);  
+       
+        
+        for(let i=1;i<=100;i++){
+            let count=0
+        for (let index = 1; index <= i; index++) {
+            if (i%index==0) {
+                count++;
+            }
+        }
+        if (count==2) {
+            console.log(i+" is prime");
+            
+        }
+        else{
+            console.log(i+ " is not prime");
+        }
+    }
+    //String methods
+ //concat
+    let a="Yuva "
+     y=a.concat("Raju ")
+     console.log(y);
+        console.log(y.concat("King"))
+ //indexOf
+    console.log(y.indexOf('j',8))
+    console.log(y);
+//includes
+let b="kothapet"
+console.log(b.includes('kot'));
+console.log(b.includes('tha',5));
+
+//charAt
+let d="I m nnid"
+console.log(d.charAt(5));
+
+//charCodeAt
+let e="A B ndndud nii"
+console.log(e.charCodeAt(2));
+console.log(e.charCodeAt(678));
+//slice
+let f="Yttu"
+console.log(f.slice(0,2));
+//split
+let g="hi@i@am@yuvaraju"
+let h=g.split("");
+console.log(typeof(h));
+console.log(h);
+//toLowerCase
+let i="I_AM_YUVA_RAJU"
+let j=i.toLowerCase()
+console.log(j);
+
+//toUpperCase
+let k="i_am_yuva_raju"
+let l=k.toUpperCase();
+console.log(k.toUpperCase());
+console.log(k);
+
+
+
+//substring
+let m="yuvaraju"
+let n=m.substring(1,-3)//negative index value is ignored only takes 1 as index
+console.log(n);
+console.log(m.substring(4,1));//reversing index is possible.--> substring swap the index values internally
+console.log(m.substring(-3,1));
+
+</script>
+</body>
+</html>

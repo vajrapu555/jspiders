@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="a">Hi ba</h1>
+    <h2 id="b">Bye ba</h2>
+    <h2 id="a">Hi rani</h2>
+    <span id="c">Hi hello</span>
+    <div id="e">
+        <h1>hi helloooo</h1>
+        <h2 id="d">hIii</h2>
+    </div>
+    <h1 class="a">yuviiiiii</h1>
+    <h1 class="a">Hiiiiiiiiiii</h1>
+    <h2 class="y">byeeeeeee</h2>
+    <h2 class="y">comeeeee</h2>
+    <h1 class="x">heloooooo</h1>
+    <script>
+        //document.getElementById
+let y=document.getElementById("a")
+        console.log(y);//  <h1 id="a">Hi ba</h1>
+        console.log(y.innerHTML);//Hi ba
+        console.log(document.getElementById("c").innerText);//Hi Hello
+        console.log(document.getElementById("b"))//<h2 id="b">Bye ba</h2>
+        console.log(document.getElementById("b").textContent);//Bye ba
+        let z=document.getElementById("e")
+        console.log(z.innerHTML);// <h1>hi helloooo</h1>
+                                //  <h2 id="d">hIii</h2>
+        console.log(z.innerText);//hi helloooo
+                                //hIii
+        console.log(z.textContent);//    hi helloooo
+                                //          hIii
+    
+    //document.getElementsByClassName
+
+    z=document.getElementsByClassName("a")
+    console.log(z);
+    console.log(z[0]);
+    console.log(z[0].innerHTML);
+    console.log(z[1].textContent);
+    m=document.getElementsByClassName("y");
+    console.log(m[1].textContent);
+    z=document.getElementsByClassName('x')
+    console.log(z[0].innerHTML);
+
+//for in
+
+
+    </script>
+</body>
+</html>

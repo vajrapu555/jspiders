@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 30px;
+            border-radius: 13px;
+        }
+
+    </style>
+</head>
+<body>
+  <center><h1>Random Color Generator</h1></center>
+ <center><h1 id="id1"></h1><br><br></center>
+    <center><button onclick="clickColor()">CLick</button></center>
+    <script>
+    function clickColor()
+    {
+        let a=['A','B','C','D','E','F','a','b','c','d','e','f','1','2','3','4','5','6','7','8','9'];
+        let color1="#";
+        for(i=0;i<6;i++)
+        {
+            let h1=Math.floor(Math.random()*22);
+            let c=a[h1]
+            color1+=c
+        }
+        document.getElementById("id1").innerHTML=color1
+        document.querySelector("body").style.backgroundColor=color1
+
+    }
+</script>
+
+</body>
+</html>

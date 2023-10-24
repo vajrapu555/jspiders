@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 200vh;
+        
+    }
+    #textarea{
+        width: 800px;
+        height: 100px;
+        background: whitesmoke;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px green;
+        outline: none;
+        justify-content: space-evenly;
+        padding: 20px;
+        text-align: left;
+
+    }
+    .keyboard{
+        width: 800px;
+        height: 300px;
+        background: whitesmoke;
+        border-radius: 20px;
+        box-shadow: 0px 0px 2px ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .secondLast{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .space{
+        width: 60%;
+        height: 30px;
+        background: grey;
+
+    }
+    .space:active{
+        background-color: red;
+    }
+
+    input{
+        font-size: 20px;
+       
+    }
+    input:active{
+        background-color: red;
+    }
+    .back{
+        font-size: 30px;
+    }
+    .back:active{
+        background-color: brown;
+    }
+
+ 
+    </style>
+</head>
+<body>
+    <div><input type="button" id="textarea"></div>
+    <br><br><br>
+    <div class="keyboard">
+    <div class="row">
+        <div class="key"><input type="button" value="1" onclick="yuvi('1')"></div>
+        <div class="key"><input type="button" value="2" onclick="yuvi('2')"></div>
+        <div class="key"><input type="button" value="3" onclick="yuvi('3')"></div>
+        <div class="key"><input type="button" value="4" onclick="yuvi('4')"></div>
+        <div class="key"><input type="button" value="5" onclick="yuvi('5')"></div>
+        <div class="key"><input type="button" value="6" onclick="yuvi('6')"></div>
+        <div class="key"><input type="button" value="7" onclick="yuvi('7')"></div>
+        <div class="key"><input type="button" value="8" onclick="yuvi('8')"></div>
+        <div class="key"><input type="button" value="9" onclick="yuvi('9')"></div>
+        <div class="key"><input type="button" value="0" onclick="yuvi('0')"></div>
+        <div class="back fa-solid fa-delete-left"></div>
+    </div>
+    <div class="row">
+        <div class="key"><input type="button" value="q" onclick="yuvi('q')"></div>
+        <div class="key"><input type="button" value="w" onclick="yuvi('w')"></div>
+        <div class="key"><input type="button" value="e" onclick="yuvi('e')"></div>
+        <div class="key"><input type="button" value="r" onclick="yuvi('r')"></div>
+        <div class="key"><input type="button" value="t"onclick="yuvi('t')"></div>
+        <div class="key"><input type="button" value="y"onclick="yuvi('y')"></div>
+        <div class="key"><input type="button" value="u" onclick="yuvi('u')"></div>
+        <div class="key"><input type="button" value="i" onclick="yuvi('i')"></div>
+        <div class="key"><input type="button" value="o" onclick="yuvi('o')"></div>
+        <div class="key"><input type="button" value="p" onclick="yuvi('p')"></div>
+    </div>
+    <div class="row">
+        <div class="key"><input type="button" value="CapsLock"></div>
+        <div class="key"><input type="button" value="a" onclick="yuvi('a')"></div>
+        <div class="key"><input type="button" value="s" onclick="yuvi('s')"></div>
+        <div class="key"><input type="button" value="d" onclick="yuvi('d')"></div>
+        <div class="key"><input type="button" value="f" onclick="yuvi('f')"></div>
+        <div class="key"><input type="button" value="g" onclick="yuvi('g')"></div>
+        <div class="key"><input type="button" value="h" onclick="yuvi('h')"></div>
+        <div class="key"><input type="button" value="j" onclick="yuvi('j')"></div>
+        <div class="key"><input type="button" value="k" onclick="yuvi('k')"></div>
+        <div class="key"><input type="button" value="l" onclick="yuvi('l')"></div>
+        <div class="key"><input type="button" value="Enter" onclick="entery()"></div>
+    </div>
+    <div class="row secondLast">
+        <div class="key"><input type="button" value="z" onclick="yuvi('z')"></div>
+        <div class="key"><input type="button" value="x" onclick="yuvi('x')"></div>
+        <div class="key"><input type="button" value="c" onclick="yuvi('c')"></div>
+        <div class="key"><input type="button" value="v" onclick="yuvi('v')"></div>
+        <div class="key"><input type="button" value="b" onclick="yuvi('b')"></div>
+        <div class="key"><input type="button" value="n" onclick="yuvi('n')"></div>
+        <div class="key"><input type="button" value="m" onclick="yuvi('m')"></div>
+    </div>
+    <div class="row">
+        <div class="key space"><input type="button" value="" onclick="spacet()" style="width: 100%;"></div>
+    </div>
+    </div>
+    <script>
+            function yuvi(a)
+            {
+                document.getElementById("textarea").value+=a;
+            }
+            function spacet()
+            {
+                let a=document.getElementById("textarea").value+=" "
+            }
+            function entery(){
+                let a=document.getElementById("textarea").value
+                let b=a+"\n"
+                document.getElementById("textarea").value=b;
+            }
+            function del()
+            {
+                let a=document.getElementById("textarea").value
+                a.pop();
+                document.getElementById("textarea").value
+            }
+    </script>
+</body>
+</html>

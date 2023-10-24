@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 20px 40px;
+            border-radius: 10px;
+        }
+        table{
+            border-radius: 20px;
+            background-color: aqua;
+            visibility: hidden;
+            color: red;
+        }
+        body{
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <button onmouseover="salaar()">SUBSCRIBE</button>
+    <div>
+        <table border="2" cellspacing="0px" cellpadding="20px">
+            <tr>
+                <td>Unsubscribe</td>
+            </tr>
+            <tr>
+                <td>Personalize</td>
+            </tr>
+            <tr>
+                <td>All</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        
+        let button=document.querySelector("button");
+        function demo(){
+            let table=document.querySelector("table");
+            table.style.visibility="visible"
+        }
+        button.onmouseover=demo
+        function demo1(){
+            let table=document.querySelector("table");
+            table.style.visibility="hidden"
+        }
+        button.onmouseout=demo1
+    </script>
+</body>
+</html>

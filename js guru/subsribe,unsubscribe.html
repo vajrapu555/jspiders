@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+           display: flex;
+           justify-content: center;
+           text-align: center;
+           /* min-height: 500px; */
+           width: 200px;
+       }
+        input{
+            padding: 30px 40px;
+            border-radius: 10px;
+            font-size: 25px;
+            min-height: 500px;
+        }
+       
+    </style>
+</head>
+<body>
+    <input type="button" value="SUBSCRIBE" id="inp1">
+    <script>
+        let b=document.querySelector("input");
+        function demo()
+        {
+            let a=document.getElementById("inp1").getAttribute("value")
+            console.log(a)
+            if(a=="SUBSCRIBE"){
+               document.querySelector("input").setAttribute("value","UNSUBSCRIBE")
+               document.querySelector("input").style.backgroundColor="aqua"
+               document.querySelector("input").style.color="red"
+               
+            }
+            else{
+                document.querySelector("input").setAttribute("value","SUBSCRIBE")
+                document.querySelector("input").style.backgroundColor="green"
+                document.querySelector("input").style.color="blue"
+            }
+        }
+        b.addEventListener('click',demo)
+    </script>
+</body>
+</html>

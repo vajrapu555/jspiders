@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        i{
+            color: blue;
+            font-size: 300px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="id1" placeholder="Enter any website you want">
+    <br><br>
+    <i class="fa-brands fa-twitter"></i><br><br>
+    <button onclick="yuvi()">click me</button>
+    <script>
+        function yuvi()
+        {
+        //    let a= window.alert("HIii")
+        //    alert('BYE')
+    //    let a= confirm("hi ")
+    //    alert(a)
+    // //    alert(typeof a)
+    // if(a==true)
+    // {
+    //   alert("User click ok")
+    // }
+    // else{
+    //     alert("User click cancel")
+    // }
+    // let a=prompt("Enter a num")
+    // alert(a)
+    // alert(typeof a)
+    // //let b=parseInt(a)
+    // let b=parseFloat(a)
+    // alert(b)
+    // alert(typeof b)
+    let a=document.getElementById("id1").value
+    open(`https://www.${a}.com`)
+    close()
+
+
+
+           
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+            animation:clock 20s infinite;
+        }
+        h1{
+            font-size: 50px;
+            background-color: bisque;
+            text-align: center;
+            font-style: italic;
+            color: green;
+            text-shadow: 1px 1px 1px  blue, -1px 1px 1px  blue, 1px -1px 1px  blue, -1px -1px 1px  blue;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px;
+            flex-direction: column;
+        }
+        @keyframes clock {
+            from{
+                filter: hue-rotate(0deg);
+            }
+            to{
+                filter: hue-rotate(2000deg);
+            }
+            
+        }
+        #hour{
+            font-size: 50px;
+        }
+        #date{
+            font-size: 20px;
+        }
+        .a{
+            font-style: italic;
+            color: red;
+            text-shadow: 1px 1px 1px  blue, -1px 1px 1px  blue, 1px -1px 1px  blue, -1px -1px 1px  blue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <input type="text" placeholder="enter color" id="inp1">
+    <br> -->
+    <!-- <button onclick="abc1()">click</button> -->
+    <h1>digital clock</h1>
+    <div class="container">
+        <span id="hour" class="a"></span>
+        <span id="date" class="a"></span>
+    </div>
+    <script>
+        // setInterval(() => {
+        //     document.write("welcome")
+            
+        // }, 1000);
+        // setTimeout(() => {
+        //     document.write("welcome")
+        // },4000);
+
+
+
+        // function abc()
+        // {
+        //     let color=document.getElementById('inp1').value;
+        //     document.querySelector("body").style.backgroundColor=color
+            
+        // }
+        // function abc1()
+        // {
+        //     setTimeout(() => {
+        //         abc()
+                
+        //     }, 1000);
+        // }  
+
+
+  
+
+    //     function color()
+    //     {
+    //         let color=["red","green","black","white","yellow","blue","aqua"]
+    //         for(i=0;i<=color.length-1;i++)
+    //         {
+    //             console.log(color[i])
+    //             document.querySelector("body").style.backgroundColor+=color[i]
+    //         }
+    //     }
+    //     function abc1()
+    //     {
+    //         setTimeout(() => {
+    //             color()
+    //         }, 1000);
+    //     }
+
+
+    function displaytime()
+    {
+
+    }
+
+    // </script>
+    
+</body>
+</html>

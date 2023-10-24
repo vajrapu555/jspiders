@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        #img1{
+            width: 80%;
+            height:25%;
+        }
+        button{
+            height:100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let img1=document.createElement("img");
+        img1.src='im2.jpg'
+        img1.setAttribute("id","img1")
+        let btn1=document.createElement("button");
+        btn1.innerHTML=">"
+        btn1.setAttribute("id","btn1")
+        let btn2=document.createElement("button");
+        btn2.innerHTML="<"
+        btn2.setAttribute("id","btn2")
+        let arr=['im1.jpg','im11.jpg','im22.jpg','im33.jpg','images 44.jpg']
+        let i=0;
+        btn1.addEventListener("click",function()
+        {
+           
+            img1.src=arr[i]
+            i++;
+            if(i==arr.length)
+            {
+                i=0;
+            }
+        })
+        y=arr.length
+        btn2.addEventListener("click",function()
+        {
+            y--;
+            img1.src=arr[y]
+            if(y==0){
+                y=arr.length
+            }
+        })
+        let b=document.body
+        b.append(img1)
+        b.append(btn1)
+        b.append(btn2)
+    </script>
+</body>
+</html>

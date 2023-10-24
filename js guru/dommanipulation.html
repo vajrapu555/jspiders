@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let b=document.body;
+        let ul=document.createElement("ul");
+        console.log(ul)
+        ul.setAttribute("type","square")
+        // ul.setAttribute("start","1")
+        let arr =['html','css','javascript'];
+        let h1=document.createElement("h1");
+        h1.innerHTML=arr
+        for (i=0;i<arr.length;i++)
+        {
+            let li=document.createElement("li");
+            li.innerHTML=arr[i]
+            console.log(li)
+            ul.append(li)
+        }
+        b.append(h1)
+        b.append(ul)
+    </script>
+    
+</body>
+</html>

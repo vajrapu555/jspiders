@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let table=document.createElement("table");
+        table.border='3'
+        table.cellPadding="10px"
+        table.rules="all"
+        table.style.backgroundColor="green"
+        let arr1=[]
+        for(i=0;i<4;i++)
+        {
+            let tr=document.createElement("tr")
+            arr1.push(tr) 
+        }
+        for(k=0;k<=arr1.length-1;k++)
+        {
+            table.append(arr1[k])
+        }
+        let arr=["name","qulification","percentage"]
+        for (i=0;i<=arr.length-1;i++)
+        {
+            let th=document.createElement("th");
+            th.innerHTML=arr[i]
+            arr1[0].append(th)
+        }
+        let arr2=["dinga","b.tech",90.9]
+        for(i=0;i<arr.length;i++)
+        {
+            let th=document.createElement("th");
+            th.innerHTML=arr2[i]
+            arr1[1].append(th)
+        }
+        let arr3=["dinga","m.tech","30.5"]
+        for(i=0;i<arr.length;i++)
+        {
+            let th=document.createElement("th");
+            th.innerHTML=arr3[i]
+            arr1[2].append(th)
+        }
+        let arr4=["manga","m.tech",89.56]
+        for(i=0;i<arr.length;i++)
+        {
+            let th=document.createElement("th");
+            th.innerHTML=arr4[i]
+            arr1[3].append(th)
+        }
+        let b=document.body
+        b.append(table)
+    </script>
+</body>
+</html>

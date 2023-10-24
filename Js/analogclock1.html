@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+        .clock{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+             display: flex;
+            justify-content: center;
+            align-items: center; 
+            border-radius: 50%;
+            background-attachment: fixed;
+            background-image: url(../images/space.jpg);
+            background-position: auto;
+        }
+        .clock span{
+            position: absolute;
+            transform: rotate(calc(30deg*var(--a)));
+            inset:12px ;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+            color:chocolate;
+        }
+        .clock span i{
+            position: absolute;
+            transform: rotate(calc(-30deg*var(--a)));
+
+        }
+        .clock::before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            z-index: 3;
+            background-color: white;
+        }
+        .time i{
+            position: absolute;
+                width: 10px;
+                height: var(--h);
+                background-color: var(--c);
+                border-radius: 5px;
+        }
+        .time{
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="time" id="seconds" style="--h:80px ;--c:red"><i></i></div>
+        <div class="time" id="minutes" style="--h:90px ;--c:yellow"><i></i></div>
+        <div class="time" id="hours" style="--h:60px ;--c:green"><i></i></div>
+
+        <span style="--a:1"><i>1</i></span>
+        <span style="--a:2"><i>2</i></span>
+        <span style="--a:3"><i>3</i></span>
+        <span style="--a:4"><i>4</i></span>
+        <span style="--a:5"><i>5</i></span>
+        <span style="--a:6"><i>6</i></span>
+        <span style="--a:7"><i>7</i></span>
+        <span style="--a:8"><i>8</i></span>
+        <span style="--a:9"><i>9</i></span>
+        <span style="--a:10"><i>10</i></span>
+        <span style="--a:11"><i>11</i></span>
+        <span style="--a:12"><i>12</i></span>
+    </div>
+    <script>
+        function analogClock()
+        {
+            let h=document.getElementById("hours")
+            let m=document.getElementById("minutes")
+            let s=document.getElementById("seconds")
+             
+            let date=new Date();
+            let h1=date.getHours();
+            let m1=date.getMinutes();
+            let s1=date.getSeconds();
+
+            let hh=30*h1+m1/2;
+            let mm=6*m1;
+            let ss=6*s1;
+
+            h.style.transform=`rotate(${hh}deg)`
+            m.style.transform=`rotate(${mm}deg)`
+            s.style.transform=`rotate(${ss}deg)`
+
+        }
+        setInterval(() => {
+            analogClock()
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hi"></h1>
+    <script>
+        let date=new Date()
+        let month=date.getMonth()
+        console.log(month);
+        switch(month)
+        {
+            case 0:console.log("January")
+            break;
+            case 1:console.log("February")
+            break;
+            case 2:console.log("March")
+            break;
+            case 3:console.log("April")
+            break;
+            case 4:console.log("May")
+            break;
+            case 5:console.log("June")
+            break;
+            case 6:console.log("July")
+            break;
+            case 7:console.log("August")
+            break;
+            case 8:console.log("September")
+            document.getElementById("hi").innerHTML="September"
+            break;
+            case 9:console.log("October")
+            break;
+            case 10:console.log("November")
+            break;
+            case 11:console.log("December")
+            break;
+        
+        }
+        let a=["january","february","march","april","may","june","july","august","september","october","november","december"]
+        console.log(a[month]);
+
+        let time=date.getFullYear()
+        document.getElementById("hi").innerHTML=time
+        console.log(time);
+    </script>
+</body>
+</html>

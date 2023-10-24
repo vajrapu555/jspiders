@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 50px;
+            display: flex;
+            justify-content:center ;
+        }
+        #b{
+            position: relative;
+            left: 700px;
+            top: 200px;
+        }
+        #a{
+            position: relative;
+            top: 250px;   
+        }
+        div{
+            height: 500px;
+            width: 800px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>images</h1>
+    <button id="a" onclick="guru()"><a href="#"  >&#8249;</a></button>
+    <button id="b" onclick="guru1()"><a href="#" >&#8250;</a></button>
+    <div id="image-container"></div>
+    
+
+    <script>
+        function guru()
+        {
+            const image=['im 7.jpg','im1.jpg','im2.jpg','im3.jpg','images 4.jpg'];
+            let count=image.length;
+            count1=0
+
+            /* // const container=document.getElementById('image-container');
+
+            // for(i=0;i<count;i++)
+            // {
+            //     // document.querySelector("#h").style.backgroundImage=array;
+            //     const img= document.createElement('img');
+            //     img.src = image[i];
+            //     container.appendChild(img);
+
+                
+            // }
+            // document.querySelector("#h").innerHTML=array;
+            // container.appendChild(img); */
+            const g=document.getElementById('image-container');
+            for(i=0;i<=count-1;i++)
+            {
+                const img=document.createElement("img");
+                // img.src=image[i];
+                let element ='<img src="' + images[i] + '">'
+                document.querySelector('#g').innerHTML += element ;
+                // g.appendChild(img)
+                count1++
+                console.log(count1)
+                
+            }
+            
+        }
+        function guru1()
+        {
+            const image=['js guru/im 7.jpg','im1.jpg','im2.jpg','im3.jpg','images 4.jpg'];
+            let count=image.length;
+            count1=0
+            const g=document.getElementById('image-container');
+            for(i=count;i>0;i--)
+            {
+                const img=document.createElement("img");
+                img.src=image[i];
+                g.appendChild(img)
+                console.log(i)
+                count1--
+                console.log(count1)
+                
+            }
+            
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: "header header header" "aside main section" "footer footer footer";
+            border: 5px solid deeppink;
+            grid-column-gap: 30px;
+            grid-row-gap: 10px;
+        }
+        header{
+            background-color: aquamarine;
+            grid-area: header;
+        }
+        aside{
+            background-color: beige;
+            grid-area: aside;
+        }
+        main{
+            background-color: orange;
+            grid-area: main;
+        }
+        section{
+            background-color: blue;
+            grid-area: section;
+        }
+        footer{
+            background-color: chartreuse;
+            grid-area: footer;
+        }
+        .a{
+            text-align: center;
+            border: 3px solid black;
+            /* min-height: 280px;
+            width: 100%; */
+            font-size: 50px;
+            padding: 90px;
+        }
+    </style>
+</head>
+<body>
+    <header class="a">HEADER</header>
+    <aside class="a">ASIDE</aside>
+    <main  class="a">MAIN</main>
+    <section class="a">SECTION</section>
+    <footer class="a">FOOTER</footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+            transition: all 3s;
+            color: brown;
+        }
+        .child1:hover{
+            transform: translateY(-100px);
+        }
+        .child2:hover{
+            transform: scale(1.10,1.10);
+            /* transform: translateX(-100px); */
+            /* transform: scaleY(2); */
+        }
+        .child3:hover{
+            transform: skewY(360deg);
+        }
+        .child4:hover{
+            transform: rotateZ(90deg);
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class="child1">transalte</div>
+    <div class="child2">scale</div>
+    <div class="child3">skew</div>
+    <div class="child4">rotate</div>
+</body>
+</html>

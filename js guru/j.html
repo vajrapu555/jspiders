@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color:whitesmoke;
+        }
+        .a{
+            width:100%;
+            height:30px;
+            background-color: white;
+        }
+        select{
+            border: none;
+        }
+        .food{
+            width:100%;
+            height:70px;
+            background-color: brown;
+        }
+        #food{
+            width: 60px;
+            height: 50px;
+        }
+        .home:hover{
+            color: red;
+        }
+        .b{
+            width:100%;
+            height: 200px;
+            background-color: whitesmoke;
+           
+        }
+        input{
+            height: 30px;
+            width: 400px;
+            border-radius: 100px;
+            position: relative;
+            top: 100px;
+        }
+        .home{
+            width: 80px;
+        }
+        #foodjournal{
+            width: 130px;
+        }
+        #contact{
+            width: 130px;
+        }
+        #mutliimage{
+            width: 1000px;
+            height: 200px;
+        }
+      
+        #img1{
+            height: 180px;
+            width: 100%;
+            position: relative;
+            top: -30px;
+        }
+        #search{
+            position: relative;
+            top: 60px;
+            background-color: aqua;
+        }
+        #btn1{
+            position: relative;
+            top: -180px;
+            height: 80px;
+        }
+        #btn2{
+            position: relative;
+            top: -180px;
+            left: 98%;
+            height: 80px;
+        }
+        .c{
+            width: 100%;
+            height: 90px;
+            background-color: aqua;
+            
+        }
+        .c1{
+            width: 25%;
+            height: 90px;
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="food">
+        <img src="https://www.foodfood.com/assets/images/logo/logo.png" alt="" id="food">
+    </div>
+    <div class="a">
+        <table >
+            <tr>
+                <td style="color:brown;">
+                    HOME
+                </td>
+                <td>
+                    <select name="" id="chefs"  class="home" >
+                        <option value="">CHEFS</option>
+                        <option value="">Chef Amrita Raichand</option>
+                        <option value="">Chef Rakhee Vaswani</option>
+                        <option value="">Masterchef Sanjeev Kapoor</option>
+                        <option value="">Chef Sanjay Gupta</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id=""   class="home">
+                        <option value="">shows</option>
+                        <option value="">Recipes</option>
+                        <option value="">TEA TIME</option>
+                        <option value="">STYLE CHEAF</option>
+                        <option value="">FOOD THIS WEEK</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id="" class="home">
+                        <option value="">Recipes</option>
+                        <option value="">DFGKNF</option>
+                        <option value="">FDFD</option>
+                        <option value="">FDDF</option>
+                        <option value="">GBKDGH</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id=""  class="home">
+                        <option value="">VIDEOS</option>
+                        <option value="">COURSE</option>
+                        <option value="">COISINE</option>
+                        <option value="">OCCASION</option>
+                        <option value="">SHOW</option>
+                    </select>
+
+                </td>
+                <td>
+                    <select name="" id="foodjournal"  class="home">
+                        <option value="">FOOD JOURNAL</option>
+                        <option value="">ARTICLE</option>
+                        <option value="">HEALTH</option>
+                        <option value="">FAQ</option>
+                        <option value="">FUN FOOD FACTS</option>
+                    </select>   
+                </td>
+                <td>
+                        <option value=""  class="home">BLOG</option>
+                </td>
+                <td>
+                        <option value=""  class="home">ABOUT</option>
+                </td>
+                <td>
+                    <option value=""  class="home" id="contact">CONTACT US</option>
+                </td>
+                <td>
+                    <option value=""  class="home" id="signin">SIGN IN</option>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="b"  id="mutliimage">
+        <input type="search" placeholder="search" id="search">
+    </div>
+    <div class="c">
+        <img src="https://www.foodfood.com/assets/images/cuisine.png" alt="cusine" id="cusine"><h1>Cuisine</h1>
+        <img src="https://www.foodfood.com/assets/images/ingredience.png" alt="ingredient" id="ingredient"><h1>Ingredient</h1>
+        <img src="https://www.foodfood.com/assets/images/meal-&-course.png" alt="meal" id="meal"><h1>Meal</h1>
+        <img src="https://www.foodfood.com/assets/images/Chef.png" alt="OCCASION" id="OCCASION"><h1>OCCASION</h1>
+    </div>
+    <script>
+    let img1=document.createElement("img");
+        img1.src='im2.jpg'
+        img1.setAttribute("id","img1")
+        let btn1=document.createElement("button");
+        btn1.innerHTML=">"
+        btn1.setAttribute("id","btn1")
+        let btn2=document.createElement("button");
+        btn2.innerHTML="<"
+        btn2.setAttribute("id","btn2")
+        let arr=['im1.jpg','im11.jpg','im22.jpg','im33.jpg','images 44.jpg']
+        let i=0;
+        btn1.addEventListener("click",function()
+        {
+           
+            img1.src=arr[i]
+            i++;
+            if(i==arr.length)
+            {
+                i=0;
+            }
+        })
+        y=arr.length
+        btn2.addEventListener("click",function()
+        {
+            y--;
+            img1.src=arr[y]
+            if(y==0){
+                y=arr.length
+            }
+        })
+        let mut=document.getElementById("mutliimage")
+       
+        mut.append(img1)
+        mut.append(btn1)
+        mut.append(btn2)
+    </script>
+</body>
+
+
+</html>

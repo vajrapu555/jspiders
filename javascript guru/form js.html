@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td>:</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="abc"></td>
+        </tr>
+        <tr>
+            <td><label for="phone">Phone No</label></td>
+            <td>:</td>
+            <td><input type="text" id="phone"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td id="abc1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><center><input type="button" value="submit" onclick="guru()"></center></td>
+        </tr>
+    
+    <script>
+        function guru()
+        {
+        let name1=document.getElementById('name').value;
+        if (name1=="")
+        {
+            document.getElementById("abc").innerHTML=`Please dont leave empty`
+            document.getElementById("abc").style.color="red"
+            document.getElementById("name").style.borderColor=`red`
+        }
+        else if(name1.length<3 || name1.length>=15)
+            {
+                document.getElementById("abc").innerHTML=`invalid name`
+                document.getElementById("abc").style.Color=`red`   
+                document.getElementById("name").style.borderColor=`red`   
+            }
+        else
+        {
+            document.getElementById("name").style.borderColor=`green`   
+        }
+        let name2=document.getElementById('phone').value;
+        if (name2=="")
+        {
+            document.getElementById("abc1").innerHTML=`Please dont leave empty`
+            document.getElementById("abc1").style.color=`red`
+            document.getElementById("phone").style.borderColor=`red`
+        }
+        else if(name2.length==10)
+            {
+                document.getElementById("abc1").innerHTML=`invalid name`
+                document.getElementById("abc1").style.color=`red`   
+                document.getElementById("phone").style.borderColor=`red`   
+            }
+        else
+        {
+            document.getElementById("phone").style.borderColor=`green`   
+        }
+       
+
+        }
+
+    </script>
+    </table>
+</body>
+</html>

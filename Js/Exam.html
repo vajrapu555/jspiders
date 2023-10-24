@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            width: 100%;
+            height: 800px;
+            background-color: aqua;
+        }
+        .content{
+            width: 40%;
+            height: 500px;
+            border: 2px solid black;
+            float: left;
+            position: relative;
+            top: 100px;
+        }
+        #form1{
+            width: 55%;
+            height: 500px;
+            float: left;
+            background-color: red;
+            top: 100px;
+            position: relative;
+            background: linear-gradient();
+        }
+        #child{
+            width: 70%;
+            height: 80%;
+            background-color: brown;
+            position: relative;
+            left: 100px;
+        }
+        .circle{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+           /* background-color: yellow;*/
+           background-image: url(../images/space.jpg);
+            position: relative;
+            right: 100px;
+        }
+        .field{
+            position: relative;
+            left: 150px;
+            top: 40px;
+        }
+        .field input{
+            border-radius: 5px;
+            background: transparent;
+            padding: 4px;
+            color: floralwhite;
+        }
+        .field label{
+            color:gold;
+        }
+        button{
+            position: relative;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="content">
+        <h1 id="local"></h1>
+            <p id="userlocal"></p>
+            <p id="phnolocal"></p>
+            <p id="emaillocal"></p>
+            <p id="passwordlocal"></p>
+            <p id="cpasswordlocal"></p>
+        
+        <h1 id="session"></h1>
+            <p id="usersession"></p>
+            <p id="phnosession"></p>
+            <p id="emailsession"></p>
+            <p id="passwordsession"></p>
+            <p id="cpasswordsession"></p>
+        </div>
+
+        <div id="form1">
+            <p style="background-color: blueviolet; color: white;">Welcome to Exam</p>
+            <div id="child">
+                <div class="circle">
+                    <div class="field">
+                        <label for="user">Enter User:</label><br>
+                        <input type="text" name="" id="user"><br>
+                        <small id="suser">hh</small>
+                    </div>
+                    <div class="field">
+                        <label for="phno">Enter Phno:</label><br>
+                        <input type="text" name="" id="phno"><br>
+                        <small id="sphno">hh</small>
+                    </div>
+                    <div class="field">
+                        <label for="email">Enter Email:</label><br>
+                        <input type="email" name="" id="email"><br>
+                        <small id="semail">hh</small>
+                    </div>
+                    <div class="field">
+                        <label for="pass">Enter Password:</label><br>
+                        <input type="password" name="" id="pass"><br>
+                        <small id="spass">hh</small>
+                    </div>
+                    <div class="field">
+                        <label for="cpass">Confirm Password:</label><br>
+                        <input type="password" name="" id="cpass"><br>
+                        <small id="scpass">hh</small>
+                    </div>
+                    <div class="field">
+                        <button onclick="myDetails()">Click</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<script>
+    function myDetails()
+    {
+        document.getElementById("local").innerHTML=`<b><u>Local Storage:</u><br>`
+            document.getElementById("session").innerHTML=`<b><u> Session Storage:</u>`
+
+
+        document.getElementById("")
+        let user1=document.getElementById("user").value;
+        if(user1=="")
+        {
+            document.getElementById("suser").innerHTML=`Please dont leave Empty`;
+            document.getElementById("suser").style.color=`red`;
+            document.getElementById("user").style.borderColor=`red`;
+        }
+        else if(user1.length<3||user1.length>15)
+        {
+            document.getElementById("suser").innerHTML=`Invalid Username`;
+            document.getElementById("suser").style.color=`red`;
+            document.getElementById("user").style.borderColor=`red`;
+
+        }
+        else
+        {
+
+            document.getElementById("user").style.borderColor=`green`;
+            localStorage.setItem("user",user1);
+            document.getElementById("userlocal").innerHTML=`User Name: ${localStorage.getItem("user")}   stored`
+            sessionStorage.setItem("user",user1);
+            document.getElementById("usersession").innerHTML=`<br>User Name: ${localStorage.getItem("user")}   stored`
+
+        }
+
+        let phno1=document.getElementById("phno").value;
+        if(phno1=="")
+        {
+            document.getElementById("sphno").innerHTML=`Please dont leave Empty`;
+            document.getElementById("sphno").style.color=`red`;
+            document.getElementById("phno").style.borderColor=`red`;
+        }
+        else if(phno1.length==10)
+        {
+            document.getElementById("phno").style.borderColor=`green`;
+            localStorage.setItem("phoneno",phno1);
+            document.getElementById("phnolocal").innerHTML=`Phone no: ${localStorage.getItem("phoneno")}   stored`
+            sessionStorage.setItem("phoneno",phno1);
+            document.getElementById("phnosession").innerHTML=`Phone No: ${localStorage.getItem("phoneno")}   stored`
+        }
+        else{
+            document.getElementById("sphno").innerHTML=`Invalid Phone Number`;
+            document.getElementById("sphno").style.color=`red`;
+            document.getElementById("phno").style.borderColor=`red`;
+        }
+
+        let email1=document.getElementById("email").value;
+        if(email1=="")
+        {
+            document.getElementById("semail").innerHTML=`Please dont leave Empty`;
+            document.getElementById("semail").style.color=`red`;
+            document.getElementById("email").style.borderColor=`red`;
+        }
+        else{
+            document.getElementById("email").style.borderColor=`green`;
+            localStorage.setItem("email11",email1);
+            document.getElementById("emaillocal").innerHTML=`E-mail: ${localStorage.getItem("email11")}   stored`
+            sessionStorage.setItem("email11",email1);
+            document.getElementById("emailsession").innerHTML=`E-mail: ${localStorage.getItem("email11")}   stored`
+
+        }
+
+        let pass1=document.getElementById("pass").value;
+        if(pass1=="")
+        {
+            document.getElementById("spass").innerHTML=`Please dont leave Empty`;
+            document.getElementById("spass").style.color=`red`;
+            document.getElementById("pass").style.borderColor=`red`;
+        }
+        else{
+            document.getElementById("pass").style.borderColor=`green`;
+            localStorage.setItem("pass11",pass1);
+            document.getElementById("passwordlocal").innerHTML=`Password: ${localStorage.getItem("pass11")}   stored`
+            sessionStorage.setItem("pass11",email1);
+            document.getElementById("passwordsession").innerHTML=`Password: ${localStorage.getItem("pass11")}   stored`
+
+        }
+
+    }
+</script>
+</body>
+</html>

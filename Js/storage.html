@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter Your Name:</label>
+    <input type="text" name="" id="name"><br><br>
+    <button onclick="details()">ClicK</button>
+    <p id="p1"></p>
+    <script>
+        function details()
+        {   
+            let a=document.getElementById("name").value;
+            localStorage.setItem("Name",a)
+            let b=localStorage.getItem("Name")
+            document.getElementById("p1").innerHTML=`Local Storage-->user entered: ${b}`
+            document.getElementById("p1").style.color="green"
+            localStorage.setItem("Name",a)
+
+            let c=sessionStorage.getItem("Name")
+            document.getElementById("p1").innerHTML=`Local Storage-->user entered: ${b}`
+            document.getElementById("p1").style.color="green"
+        }
+    </script>
+</body>
+</html>

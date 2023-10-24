@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter name:</label>
+    <input type="text" name="" id="name"><p id="p1"></p>  <p id="p2"></p>
+    <br><br>
+    <label for="pass">Enter Password:</label>
+    <input type="password" name="" id="pass">
+    <br><br>
+    <label for="cpass">Confirm Password:</label>
+    <input type="password" name="" id="cpass">
+    <p id="p3"></p> <p id="p4"></p>
+    <button onclick="details()">Click</button>
+    
+   
+    <script>
+    function details(){
+        let a=document.getElementById("name").value;
+        if(a=="")
+        {
+            document.getElementById("p1").innerHTML=`Please don't leave empty`
+            document.getElementById("p1").style.color="red"
+        }
+        else if(a.length<3||a.length>15){
+            document.getElementById("p1").innerHTML=`Invalid name`
+            document.getElementById("p1").style.color="red"
+        }
+        else{
+           
+            document.getElementById("p1").style.color="green"
+            sessionStorage.setItem("Name",a)
+            let c=sessionStorage.getItem("Name")
+            document.getElementById("p1").innerHTML=`Session: User Entered ${c}`
+            localStorage.setItem("Name",a)
+            let b=localStorage.getItem("Name")
+            document.getElementById("p2").innerHTML=`Local: User Entered ${b}`
+            document.getElementById("p2").style.color="blue"
+
+        }
+
+        let p=document.getElementById("pass").value;
+        if(p=="")
+        {
+            document.getElementById("p3").innerHTML=`Please don't leave empty`
+            document.getElementById("p3").style.color="red"
+            
+        }
+        else if(p.length<8||p.length>20)
+        {
+            document.getElementById("p3").innerHTML=`password must be enclosed b/w 8 to 15`
+            document.getElementById("p3").style.color="red"
+        }
+        else{
+            document.getElementById("p3").style.color="green"
+            sessionStorage.setItem("Name",p)
+            let c=sessionStorage.getItem("Name")
+            document.getElementById("p3").innerHTML=`Session: password stored ${c}`
+            localStorage.setItem("Name",p)
+            let l=localStorage.getItem("Name")
+            document.getElementById("p4").innerHTML=`Local: password stored ${l}`
+            document.getElementById("p4").style.color="blue"
+        }
+    }
+    </script>
+</body>
+</html>

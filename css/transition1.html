@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 600px;
+            background-color: black;
+        }
+        .div1{
+            width: 1000px;
+            height: 800px;
+            background-color: deeppink;
+            transition: all 20s;
+            /* transition-delay: 5s; */
+        }
+        img{
+            width: 1000px;
+            height: 800px;
+            opacity: 0;
+            /* transition-property: opacity,border-radius; */
+            /* transition-duration: 10s,20s; */
+            transition: all 20s;
+            transition-delay: 3s;
+        }
+        img:hover{
+            opacity: 1;
+            border-radius: 50%;
+        }
+        button{
+            padding: 30px 70px;
+            border-radius: 30px;
+            font-size: 30px;
+            color: white;
+            background: transparent;
+            border: 3px solid red;
+            transition: all 5s;
+        }
+        button:hover{
+            background-color: darkgreen;
+            color: darkorchid;
+            transform: scale(1.06,1.06);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <img src="./../flower.jpeg" alt="">
+        <button>submit</button>
+    </div>
+</body>
+</html>

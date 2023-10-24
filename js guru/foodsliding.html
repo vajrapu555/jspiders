@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            height: 400px;
+            width: 100%;
+            background-color: aqua;
+            position: relative;
+            top: 300px;
+            animation: division 5s infinite alternate;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            top: 300px;
+            /* transition: all 0.4s ease !important; */
+        }
+        @keyframes division {
+            0%{
+                background-image: url(https://fdstatic.foodfood.com/odd/images/rqM1JYChefs-Rasoi.jpg);
+            }
+            25%{
+                background-image: url(./im1.jpg);
+            }
+            50%{
+                background-image: url(	https://www.foodfood.com/images/banner/Cook-Smart_M.png);
+            }
+            75%{
+                background-image: url(./im11.jpg);
+            }
+            100%{
+                background-image: url(./im22.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+</body>
+</html>

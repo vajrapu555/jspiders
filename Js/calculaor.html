@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+            background-color: yellow;
+            text-align: center;
+            text-decoration: line-through;
+            text-shadow: 2px 2px 2px black;
+        }
+        table{
+            background-color: skyblue;
+            text-align: center;
+            
+        }
+        input{
+            width: 50px;
+            height: 40px;
+            font-size: 25px;
+            color: red;
+            background-color: greenyellow;
+        }
+        #screen{
+            width: 400px;
+            height: 50px;
+            text-align: end;
+        }
+        #equal
+        {
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <center><table border="2px" cellspacing="0px" cellpadding="20px">
+        <tr>
+            <td colspan="4"><input type="button" id="screen"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="+" onclick="hi('+')"></td>
+            <td><input type="button" value="-" onclick="hi('-')"></td>
+            <td><input type="button" value="*" onclick="hi('*')"></td>
+            <td><input type="button" value="/" onclick="hi('/')"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="9" onclick="hi('9')"></td>
+            <td><input type="button" value="8" onclick="hi('8')"></td>
+            <td><input type="button" value="7" onclick="hi('7')"></td>
+            <td rowspan="3"><input type="button" value="=" onclick="evals()" id="equal"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="6" onclick="hi('6')"></td>
+            <td><input type="button" value="5" onclick="hi('5')"></td>
+            <td><input type="button" value="4" onclick="hi('4')"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="3" onclick="hi('3')"></td>
+            <td><input type="button" value="2" onclick="hi('2')"></td>
+            <td><input type="button" value="1" onclick="hi('1')"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="hi('0')"></td>
+            <td><input type="button" value="." onclick="hi('.')"></td>
+            <td><input type="button" value="clr" onclick="clear1()"></td>
+            <td><input type="button" value="del" onclick="del34()"></td>   
+            
+        </tr>
+
+    </table></center>
+    <script>
+        function hi(a)
+        {
+            document.getElementById("screen").value+=a;
+        }
+
+        function evals()
+        {
+            let a=document.getElementById("screen").value;
+            let b=eval(a)
+            document.getElementById("screen").value=b;
+        }
+
+        function clear1()
+        {
+            let a=document.getElementById("screen").value=""
+        }
+
+        function del34()
+        {
+            let a=document.getElementById("screen").value
+            a=a.slice(0,-1);
+            document.getElementById("screen").value=a;
+        }
+    </script>
+</body>
+</html>

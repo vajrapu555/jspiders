@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+         body{
+            background-color: yellow;
+            animation:clock 10s infinite;
+        }
+       h1{
+            font-size: 50px;
+            background-color: rgb(25, 206, 219);
+            text-align: center;
+            font-style: italic;
+            color: rgb(237, 230, 29);
+            text-shadow: 2px 2px 2px  rgb(232, 25, 115), -2px 2px 2px  rgb(235, 20, 41), 2px -2px 2px  rgb(216, 38, 86), -2px -2px 2px  rgb(240, 5, 5);
+       }
+       @keyframes clock {
+            from{
+                filter: hue-rotate(0deg);
+            }
+            to{
+                filter: hue-rotate(2000deg);
+            }
+        }
+       img{
+        border: 5px solid violet;
+       }
+    button{
+        font-size: 50px;
+        display: flex;
+        justify-content:center ;
+    }
+    #b{
+        position: relative;
+        left: 2000px;
+        top: -410px;
+    }
+    #a{
+        position: relative;
+        top: 250px;   
+    }
+   
+</style>
+</head>
+<body>
+    <h1>images</h1>
+    <button id="a" onclick="guru1()"><a href="#"  >&#8249;</a></button>
+    <img  alt="" style="width:2030px; height: 600px;">
+    <button id="b" onclick="guru()"><a href="#" >&#8250;</a></button>
+    
+    <script >
+        
+        var photos = ['im1.jpg','im11.jpg','im22.jpg','im33.jpg','images 44.jpg']
+        var img = document.querySelector("img");
+        var count = 0;
+
+        function guru()
+        {
+            count++;
+            if(count >= photos.length)
+            {
+                count = 0;
+                img.src = photos[count];
+            }
+            else{
+                img.src = photos[count];
+            }
+        }
+        function guru1()
+        {
+            count--;
+            if(count < 0)
+            {
+                count = photos.length -1;
+                img.src = photos[count];
+            }
+            else
+            {
+                img.src = photos[count];
+            }
+        }
+    </script>
+</body>
+</html>

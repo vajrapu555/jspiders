@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #h{
+
+        }
+        #a{
+            height: 350px;
+            width: 600px;
+            background-color: pink;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            position: relative;
+            left: 400px;
+            top: -350px;
+            border-radius: 10px;
+            border:5px solid red ;
+        }
+        #b{
+            height: 250px;
+            width: 500px;
+            background-color: orangered;
+            z-index: 1;
+            border-radius: 20px;
+            border:5px solid yellow ;
+        }
+        #c{
+            height: 350px;
+            width: 400px;
+            background-color: gray;
+            z-index: 1;
+            border-radius: 50%;
+            /* background-image: url(./../623.jpg); */
+            color: whitesmoke;
+            position: relative;
+            left: -100px;
+            border:5px solid blue
+        }
+        h1{
+            background-color: red;
+            color: aqua;
+        }
+        #h{
+            height: 350px;
+            width: 350px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="h"></div>
+    <div id="a" >
+        <h1>😊😊WELCOME TO EXAM😊😊</h1>
+        <center><div id="b"><div id="c">
+        <h4 id="name">NAME<br><input type="text"  style="border-color: red"></h4>
+        <small id="s1"></small>
+        <h4 id="phone">phone <br><input type="tel" style="border-color: red"></h4>
+        <small id="s2"></small>
+        <h4 id="email">email <br><input type="text" style="border-color: red"></h4>
+        <small id="s3"></small>
+        <h4 id="password">password<br><input type="text" style="border-color: red"></h4>
+        <small id="s4"></small>
+        <h4 id="conform">conform password<br><input type="text" style="border-color: red"></h4>
+        <small id="s5"></small>
+        <center><button style="border-color: aquamarine; color: red;" onclick="details()">submit</button></center>
+        </div>
+        </div></center>
+    </div>
+    <script>
+        function details()
+        {
+            let name1=document.getElementById("name").value;
+            let phone1=document.getElementById("phone").value;
+            let email1=document.getElementById("email").value;
+            let password1=document.getElementById("password").value;
+            let conform1=document.getElementById("conform").value;
+
+            let s1=document.getElementById("s1");
+            let s2=document.getElementById("s2");
+            let s3=document.getElementById("s3");
+            let s4=document.getElementById("s4");
+            let s5=document.getElementById("s5");
+
+            if(name1=="")
+            {
+                s1.innerHTML=`don't leave empty`;
+                s1.style.color=`red`;
+                document.getElementById("name").style.border=`3px solid red`
+            }
+            else if(name1.length<3||name1.length>15)
+            {
+                s1.innerHTML=`invalid name`;
+                s1.style.color=`red`;
+                document.getElementById("name").style.border=`3px solid red`
+            }
+            else
+            {
+                sessionStorage
+            }
+
+
+
+        }
+    </script>
+</body>
+</html>

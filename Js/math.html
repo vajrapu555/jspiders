@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        input{
+            border-color: aquamarine;
+            border-style: dashed;
+            border-width: 10px;
+        }
+        button{
+            width: 150px;
+            background-color:chartreuse;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <label for="te" style="font-size: 20px; color: darkred;font-style: oblique;">Enter the number:</label>
+    <input type="text" name="" id="te">
+    <br><br>
+    <button onclick="hi()">Click for square</button>
+    <br><br>
+    <button onclick="cubeRoot()">Click For cube</button>
+    <br><br>
+    <button onclick="log1()">Click for Log</button>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+    <h1 id="h3"></h1>
+    <script>
+        function hi()
+        {
+        let a=document.getElementById("te").value;
+        let b=Math.sqrt(a);
+        document.getElementById("h1").innerHTML=`The squrt of ${a} is :${b}`;
+        document.getElementById("h1").style.color="blue"
+
+        }
+        function cubeRoot()
+        {
+           let x=document.getElementById("te").value;
+           let y=Math.cbrt(x);
+           document.getElementById("h2").innerHTML=`The cubic of ${x} is :${y}`;
+           document.getElementById("h2").style.color="red"
+
+        }
+        function log1()
+        {
+            let x=document.getElementById("te").value;
+           let y=Math.log(x);
+           document.getElementById("h3").innerHTML=`The log of ${x} is :${y}`;
+           document.getElementById("h3").style.color="green"
+        }
+
+    </script>
+</body>
+</html>

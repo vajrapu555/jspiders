@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inp1{
+            height: 30px;
+            width: 500px;
+            border-color: aquamarine;
+            border-style: groove;
+            border-width: 50px ;
+            border-radius: 100px;
+            color:red ;
+            font-size: large;
+            background-color: gold;
+        }
+        button{
+            height: 20px;
+            width: 100px;
+            color: whitesmoke;
+            background-color: rgb(210, 30, 162);
+            border-style: groove;
+            border-radius: 100px;
+        }
+        body{
+            /* background-color: aqua; */
+            background-image: url(.//../../Downloads/660513.jpg);
+            background-size: 500px 500px;
+            background-position: center;
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <center><input type="text" id="inp1"></center><br><br>
+    <center><button onclick="calculation()">click square</button></center>
+    <center><button onclick="calculationcube()">click cube</button></center>
+    <center><button onclick="calculationlog()">click log</button></center>
+
+
+    <h1 id="h1"></h1>
+    <script>
+        function calculation()
+        {
+            let a=document.getElementById("inp1").value;
+            let b=Math.sqrt(a)
+            document.getElementById("h1").innerHTML=`the square root of given number ${a} is : ${b}`
+            document.querySelector("h1").style.color=`yellow`
+        }
+        function calculationcube()
+        {
+            let a1=document.getElementById("inp1").value;
+            let b1=Math.cbrt(a1)
+            document.getElementById("h1").innerHTML=`the cube root of given number ${a1} is : ${b1}`
+            document.querySelector("h1").style.color=`green`
+        }
+        function calculationlog()
+        {
+            let a2=document.getElementById("inp1").value;
+            let b2=Math.log(a2)
+            document.getElementById("h1").innerHTML=`the log  of the given number ${a2} is : ${b2}`
+            document.querySelector("h1").style.color=`blue`
+        }
+
+    </script>
+</body>
+</html>

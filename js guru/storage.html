@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">ENTER name:</label><input type="text" id="name">
+    <p id="p1"></p>
+    <button onclick="details()">click</button>
+
+    <script>
+        function details()
+        {
+            let name1=document.getElementById("name").value;
+            localStorage.setItem("NAME",name1);
+            let b=localStorage.getItem("NAME");
+            document.getElementById("p1").innerHTML=`the username is: ${b}`
+            document.getElementById("p1").style.color=`green`
+        }
+    </script>
+</body>
+</html>

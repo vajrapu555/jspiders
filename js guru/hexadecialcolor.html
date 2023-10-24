@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            border-radius: 50px;
+            height: 50px;
+            width: 100px;
+            color: violet;
+        }
+        button:hover{
+            transform: scale(1.04,1.04);
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: aqua; background-color: red;text-align: center;">generate hexa decimal color</h1>
+    <h6 id="g"></h6>
+    <center><button onclick="guru()" >generator</button></center>
+
+    <script>
+        function guru()
+        {
+            let color=['A','B','C','D','E','F','0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+            let count=color.length;
+            let color1='#';
+
+            for(i=0;i<6;i++)
+            {
+                let a=Math.floor(Math.random()*22)
+                let b=color[a]
+                console.log(color1+=b)
+            } 
+            document.querySelector("#g").innerHTML=color1;
+            document.querySelector("body").style.backgroundColor=color1
+        }
+    </script>
+</body>
+</html>
