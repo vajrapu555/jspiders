@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 600px;
+            background-image: url(./im2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-direction: column;
+            animation: color 15s infinite;
+        }
+        @keyframes color {
+            from{
+                filter: hue-rotate(20000deg);
+            }
+            to{
+                filter: hue-rotate(0deg);
+            } 
+        }
+        input{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 15px;
+            font-size: 80px;
+        }
+        input:nth-child(even){
+            background-image: url(./im\ 7.jpg);
+            background-size: cover;
+            color: red;
+        }
+        input:nth-child(odd){
+            background-image: url(./images\ 44.jpg);
+            background-size: cover;
+            color: red;
+        }
+        h1{
+            font-size: 100px;
+            color: white;
+            display: block;
+            font-style: italic;
+            -webkit-text-stroke: 2px red;
+            /* -webkit-animation: reverse; */
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        drumsticks
+    </h1>
+    <div>
+        <input type="button" value="1" id="1" onclick="demo()">
+        <input type="button" value="2" id="2" onclick="demo()">
+        <input type="button" value="3" id="3" onclick="demo()">
+        <input type="button" value="4" id="4" onclick="demo()">
+        <input type="button" value="5" id="5" onclick="demo()">
+        <input type="button" value="6" id="6" onclick="demo()">
+        <input type="button" value="7" id="7" onclick="demo()">
+        <input type="button" value="8" id="8" onclick="demo()">
+    </div>
+    <script>
+        function demo()
+        {
+            let a=Number(document.activeElement.id);
+            console.log(a)
+            console.log(typeof a)
+
+            function music1(data)
+            {
+                let a=new Audio(data)
+                console.log(a)
+                a.play();
+            }
+            let arr=[1,2,3,4,5,6,7,8]
+            let music=['m1.mp3','m4.mp3','m2.mp3','m3.mp3','m1.mp3','m4.mp3','m2.mp3','m3.mp3']
+            for (i=0;i<=arr.length-1;i++)
+            {
+                if(a==arr[i])
+                {
+                    music1(music[i])
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -21,8 +21,9 @@
             localStorage.setItem("Name",a)
 
             let c=sessionStorage.getItem("Name")
-            document.getElementById("p1").innerHTML=`Local Storage-->user entered: ${b}`
+            document.getElementById("p1").innerHTML=`local Storage-->user entered: ${b}`
             document.getElementById("p1").style.color="green"
+            sessionStorage.setItem('Name',a)
         }
     </script>
 </body>

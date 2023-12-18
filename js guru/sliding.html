@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #slider{
+            overflow: hidden;
+        }
+        #slider header{
+            width: 400%;
+            height: 400px;
+            animation-name: slidein;
+            animation-duration: 12s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+        #slider header img{
+            width: 25%;
+            float: left;
+        }
+        @keyframes slidein{
+            0%{
+                left: 0;
+            }
+            25%{
+                left: -100%;
+            }
+            50%{
+                left: -200%;
+            }
+            75%{
+                left: -300%;
+            }
+            100%{
+                left: 0;
+            }       
+        }
+        input{
+            height: 50px;
+            width: 300px;
+            /* margin: 300px 1000px ; */
+            border-radius: 55px 0px 0px 55px;
+            /* display: flex;
+            justify-content: center;
+            text-align: center; */
+            /* background-color: aqua; */
+            z-index: 1;
+            position: relative;
+            left: 900px;
+            float: left;
+    
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <input type="search" placeholder="search">
+        <header>
+            <img src="im 7.jpg" alt="">
+            <img src="im1.jpg" alt="">
+            <img src="im11.jpg" alt="">
+            <img src="im2.jpg" alt="">
+        </header>
+    </div>
+</body>
+</html>

@@ -17,6 +17,8 @@
             float: left;
             position: relative;
             top: 100px;
+            background-image: url(./../dog.jpg);
+            background-size: 100% 100%;
         }
         #form1{
             width: 55%;
@@ -30,7 +32,7 @@
         #child{
             width: 70%;
             height: 80%;
-            background-color: brown;
+            background-color: rgb(42, 245, 7);
             position: relative;
             left: 100px;
         }
@@ -39,7 +41,7 @@
             height: 100%;
             border-radius: 50%;
            /* background-color: yellow;*/
-           background-image: url(../images/space.jpg);
+           background-image: url(./../indoorplant.jpg);
             position: relative;
             right: 100px;
         }
@@ -50,12 +52,12 @@
         }
         .field input{
             border-radius: 5px;
-            background: transparent;
+            background:yellow;
             padding: 4px;
-            color: floralwhite;
+            color: rgb(244, 14, 48);
         }
         .field label{
-            color:gold;
+            color:rgb(0, 251, 255);
         }
         button{
             position: relative;
@@ -123,14 +125,12 @@
     {
         document.getElementById("local").innerHTML=`<b><u>Local Storage:</u><br>`
             document.getElementById("session").innerHTML=`<b><u> Session Storage:</u>`
-
-
         document.getElementById("")
         let user1=document.getElementById("user").value;
         if(user1=="")
         {
             document.getElementById("suser").innerHTML=`Please dont leave Empty`;
-            document.getElementById("suser").style.color=`red`;
+            document.getElementById("suser").style.color=`green`;
             document.getElementById("user").style.borderColor=`red`;
         }
         else if(user1.length<3||user1.length>15)
